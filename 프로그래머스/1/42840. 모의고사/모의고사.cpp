@@ -15,16 +15,16 @@ struct node {
 
 vector<int> solution(vector<int> answers) {
     vector<int> answer;
+    
     node nd[3];
     nd[0].v = {1, 2, 3, 4, 5};
-    nd[0].index = 0;
-    nd[0].answerCnt = 0;
     nd[1].v = {2, 1, 2, 3, 2, 4, 2, 5};
-    nd[1].index = 0;
-    nd[1].answerCnt = 0;
     nd[2].v = {3, 3, 1, 1, 2, 2, 4, 4, 5, 5};
-    nd[2].index = 0;
-    nd[2].answerCnt = 0;
+
+    for (int i = 0; i < 3; i++) {
+        nd[i].index = 0;
+        nd[i].answerCnt = 0;
+    }
     
     for (int i = 0; i < answers.size(); i++) {
         for (int j = 0; j < 3; j++) {
@@ -46,13 +46,14 @@ vector<int> solution(vector<int> answers) {
     sort(temp.begin(), temp.end(), comp);
     int max = temp[0].first;
     answer.push_back(temp[0].second);
+    
     for (int i = 1; i < 3; i++) {
         if (max == temp[i].first) {
             answer.push_back(temp[i].second);
         }
     }
+    
     sort(answer.begin(), answer.end());
     
-   
     return answer;
 }
