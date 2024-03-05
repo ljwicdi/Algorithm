@@ -53,7 +53,7 @@ vector<int> solution(vector<int> answers) {
         }
     }
     
-    sort(answer.begin(), answer.end());
+    
     
     return answer;
 }
