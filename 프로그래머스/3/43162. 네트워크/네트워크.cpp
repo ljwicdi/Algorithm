@@ -39,7 +39,7 @@ void uni(int i, int j) {
 }
 
 int solution(int n, vector<vector<int>> computers) {
-    // union-find로 풀어보자 
+  
     
     
     // 본인의 부모가 담긴 배열 
