@@ -40,9 +40,6 @@ void uni(int i, int j) {
 
 int solution(int n, vector<vector<int>> computers) {
   
-    
-    
-    // 본인의 부모가 담긴 배열 
     int data;
     // 초기에는 본인 자신은 본인이 부모임 
     for (int i = 0; i < 200; i++) {
